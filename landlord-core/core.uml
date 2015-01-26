@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="1453.0" y="538.0">com.landlord.domain.person.BirthDate</node>
+    <node x="1109.0" y="538.0">com.landlord.domain.person.PersonName</node>
+    <node x="2541.0" y="538.0">com.landlord.domain.shared.PhoneNumber</node>
+    <node x="1139.0" y="1282.0">com.landlord.domain.person.PersonId</node>
+    <node x="985.0" y="1282.0">com.landlord.domain.property.PropertyType</node>
+    <node x="381.0" y="180.0">com.landlord.domain.shared.Person</node>
+    <node x="884.0" y="538.0">com.landlord.domain.property.PropertyId</node>
+    <node x="0.0" y="0.0">com.landlord.domain.person.PersonFactory</node>
+    <node x="414.0" y="947.0">com.landlord.domain.shared.Property</node>
+    <node x="1664.0" y="538.0">com.landlord.domain.person.PersonRole</node>
+    <node x="822.0" y="1282.0">com.landlord.domain.property.PropertyStatus</node>
+    <node x="0.0" y="1422.0">com.landlord.domain.person.PersonRepository</node>
+    <node x="1834.0" y="538.0">com.landlord.domain.shared.Address</node>
+    <node x="0.0" y="856.0">com.landlord.domain.property.SharedProperty</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.landlord.domain.shared.Person" target="com.landlord.domain.person.PersonRole">
+      <point x="0.0" y="0.0" />
+      <point x="1729.0" y="339.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.landlord.domain.property.SharedProperty" target="com.landlord.domain.shared.Property">
+      <point x="0.0" y="0.0" />
+      <point x="598.0" y="881.5" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.landlord.domain.shared.Person" target="com.landlord.domain.person.PersonName">
+      <point x="0.0" y="0.0" />
+      <point x="1261.0" y="339.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.landlord.domain.shared.Person" target="com.landlord.domain.property.PropertyId">
+      <point x="0.0" y="0.0" />
+      <point x="976.5" y="339.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.landlord.domain.shared.Property" target="com.landlord.domain.property.PropertyStatus">
+      <point x="0.0" y="0.0" />
+      <point x="883.5" y="1094.5" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.landlord.domain.shared.Property" target="com.landlord.domain.property.PropertyType">
+      <point x="0.0" y="0.0" />
+      <point x="1042.0" y="1094.5" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.landlord.domain.shared.Property" target="com.landlord.domain.person.PersonId">
+      <point x="0.0" y="5.0" />
+      <point x="1221.5" y="1099.5" />
+      <point x="-5.0" y="0.0" />
+    </edge>
+    <edge source="com.landlord.domain.person.PersonFactory" target="com.landlord.domain.shared.Person">
+      <point x="0.0" y="0.0" />
+      <point x="612.5" y="70.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.landlord.domain.shared.Person" target="com.landlord.domain.shared.PhoneNumber">
+      <point x="0.0" y="0.0" />
+      <point x="2681.5" y="339.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.landlord.domain.shared.Person" target="com.landlord.domain.shared.Address">
+      <point x="0.0" y="0.0" />
+      <point x="2167.5" y="339.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.landlord.domain.shared.Person" target="com.landlord.domain.person.BirthDate">
+      <point x="0.0" y="0.0" />
+      <point x="1538.5" y="339.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.5913207547169811" x="919.0184331797235" y="1312.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

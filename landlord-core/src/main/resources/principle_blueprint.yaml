@@ -1,0 +1,17 @@
+# Map submodules to packages
+
+  subdmodule-definitions:
+
+    CORE: [domain.core]
+    CUSTOMER: [domain.customer,app.customer,infrastructure.customer]
+    ORDER: [domain.order,app.order,infrastructure.order]
+    PAYMENT: [domain.payment,app.payment,infrastructure.payment]
+
+# Define dependencies between submodules
+
+  subdmodule-dependencies:
+
+    CORE: []
+    CUSTOMER: [CORE]
+    ORDER: [CORE]
+    PAYMENT: [CORE]
