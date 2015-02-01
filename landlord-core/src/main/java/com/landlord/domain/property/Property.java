@@ -9,7 +9,7 @@ import com.landlord.domain.PersonId;
 import com.landlord.domain.property.room.Room;
 import com.landlord.domain.property.room.RoomId;
 import com.landlord.domain.property.room.RoomType;
-import com.landlord.domain.property.utilities.UtilityDetails;
+import com.landlord.domain.utilities.Utilities;
 import landlord.ddd.pattern.idgeneration.IDGenerator;
 import landlord.ddd.pattern.model.AggregateRoot;
 import landlord.ddd.pattern.model.DomainException;
@@ -35,12 +35,11 @@ public class Property extends AggregateRoot<PropertyId> {
     private Furnishing furnishing;
     private SharingType sharingType;
     private Notes notes;
-    private Set<Image> imageList;
     private Set<Room> rooms;
-    private UtilityDetails utilityDetails;
+    private Utilities utilities;
     private IDGenerator<String> idGenerator;
 
-    public Property(PropertyId id, String propertyName, SharingType sharingType, PropertyType propertyType) {
+    public Property(PropertyId id, String propertyName, SharingType sharingType, PropertyType propertyType, Integer numberOfRooms) {
         super(id);
         Preconditions.checkNotNull(id);
         Preconditions.checkNotNull(propertyType);
@@ -49,10 +48,7 @@ public class Property extends AggregateRoot<PropertyId> {
         this.propertyStatus = PropertyStatus.LET_AGREED;
         this.sharingType = sharingType;
         this.rooms = Sets.newHashSet();
-    }
-
-    public void setPropertyName(String propertyName) {
-        this.propertyName = propertyName;
+        this.numberOfRooms = numberOfRooms;
     }
 
     public String propertyName() {
@@ -146,5 +142,41 @@ public class Property extends AggregateRoot<PropertyId> {
                 return room.numberOfTenants() == 0;
             }
         }).collect(toSet());
+    }
+
+    public Integer numberOfRooms() {
+        return numberOfRooms;
+    }
+
+    public Address getPropertyAddress() {
+        return propertyAddress;
+    }
+
+    public void setPropertyAddress(Address propertyAddress) {
+        this.propertyAddress = propertyAddress;
+    }
+
+    public PersonId getOwner() {
+        return owner;
+    }
+
+    public void setOwner(PersonId owner) {
+        this.owner = owner;
+    }
+
+    public Notes getNotes() {
+        return notes;
+    }
+
+    public void setNotes(Notes notes) {
+        this.notes = notes;
+    }
+
+    public Furnishing getFurnishing() {
+        return furnishing;
+    }
+
+    public void setFurnishing(Furnishing furnishing) {
+        this.furnishing = furnishing;
     }
 }

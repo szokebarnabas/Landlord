@@ -4,7 +4,7 @@ import landlord.ddd.pattern.model.ID;
 
 public class PropertyId extends ID {
 
-    public PropertyId(String value) {
+    protected PropertyId(String value) {
         super(value);
     }
 

@@ -1,5 +1,5 @@
 package com.landlord.domain.property;
 
-public enum Furnishing {
+enum Furnishing {
     FURNISHED, PARTFURNISHED, UNFURNISHED;
 }

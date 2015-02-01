@@ -45,7 +45,7 @@ public class PropertyTest {
 
     @Before
     public void init() {
-        testObject = new Property(PropertyId.createFrom("property_1"), "", SharingType.SHARED, PropertyType.HOUSE);
+        testObject = new Property(PropertyId.createFrom("property_1"), "", SharingType.SHARED, PropertyType.HOUSE, 3);
         testObject.setIdGenerator(mock(IDGenerator.class));
         when(room1.getID()).thenReturn(RoomId.createFrom("room1"));
         when(room2.getID()).thenReturn(RoomId.createFrom("room2"));

@@ -30,7 +30,7 @@ public class PropertyActionStepDefs extends PropertyStepDefs {
 
     @Given("^I create a '(.*)' property '(.*)' with the following rooms$")
     public void i_create_a_property_with_the_following_rooms(SharingType sharingType, String propertyName, List<RoomDto> rooms) {
-        Property property = propertyFactory.createProperty(propertyName, sharingType, PropertyType.HOUSE);
+        Property property = propertyFactory.createProperty(propertyName, sharingType, PropertyType.HOUSE, rooms.size());
         properties.add(property);
         for (RoomDto room : rooms) {
             property.createRoom(room.getRoomName(), room.getRoomType(), room.getNumberOfBeds());

@@ -9,10 +9,10 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.inject.Inject;
-
 import java.util.Set;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = Config.class)
@@ -29,8 +29,8 @@ public class PropertyRepositoryTest {
 
     @Before
     public void init() {
-        property1 = propertyFactory.createProperty("", SharingType.NON_SHARED, PropertyType.APARTMENT);
-        property2 = propertyFactory.createProperty("", SharingType.SHARED, PropertyType.HOUSE);
+        property1 = propertyFactory.createProperty("", SharingType.NON_SHARED, PropertyType.APARTMENT, 2);
+        property2 = propertyFactory.createProperty("", SharingType.SHARED, PropertyType.HOUSE, 2);
     }
 
     @Test

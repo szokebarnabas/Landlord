@@ -16,13 +16,17 @@ public class PropertyFactory {
         this.idGenerator = idGenerator;
     }
 
-    public Property createProperty(String propertyName, SharingType sharingType, PropertyType propertyType) {
+    public Property createProperty(String propertyName, SharingType sharingType, PropertyType propertyType, Integer numberOfRooms) {
         String propertyId = idGenerator.generate();
         if (Strings.isNullOrEmpty(propertyName)) {
             propertyName = propertyId;
         }
-        Property property = new Property(PropertyId.createFrom(propertyId), propertyName, sharingType, propertyType);
+        Property property = new Property(PropertyId.createFrom(propertyId), propertyName, sharingType, propertyType, numberOfRooms);
         property.setIdGenerator(idGenerator);
         return property;
+    }
+
+    public Property createProperty(SharingType sharingType, PropertyType propertyType, Integer numberOfRooms) {
+        return createProperty(null, sharingType, propertyType, numberOfRooms);
     }
 }

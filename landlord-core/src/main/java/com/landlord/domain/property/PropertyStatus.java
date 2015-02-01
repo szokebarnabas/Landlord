@@ -1,5 +1,5 @@
 package com.landlord.domain.property;
 
-public enum PropertyStatus {
+enum PropertyStatus {
     LET_AGREED;
 }
