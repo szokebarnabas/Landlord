@@ -39,7 +39,7 @@ public class Property extends AggregateRoot<PropertyId> {
     private Utilities utilities;
     private IDGenerator<String> idGenerator;
 
-    public Property(PropertyId id, String propertyName, SharingType sharingType, PropertyType propertyType, Integer numberOfRooms) {
+    Property(PropertyId id, String propertyName, SharingType sharingType, PropertyType propertyType, Integer numberOfRooms) {
         super(id);
         Preconditions.checkNotNull(id);
         Preconditions.checkNotNull(propertyType);
@@ -67,14 +67,6 @@ public class Property extends AggregateRoot<PropertyId> {
 
     public Set<PersonId> tenantIds() {
         return tenants;
-    }
-
-    public SharingType sharingType() {
-        return sharingType;
-    }
-
-    public PropertyStatus propertyStatus() {
-        return propertyStatus;
     }
 
     public PropertyType propertyType() {
@@ -142,41 +134,5 @@ public class Property extends AggregateRoot<PropertyId> {
                 return room.numberOfTenants() == 0;
             }
         }).collect(toSet());
-    }
-
-    public Integer numberOfRooms() {
-        return numberOfRooms;
-    }
-
-    public Address getPropertyAddress() {
-        return propertyAddress;
-    }
-
-    public void setPropertyAddress(Address propertyAddress) {
-        this.propertyAddress = propertyAddress;
-    }
-
-    public PersonId getOwner() {
-        return owner;
-    }
-
-    public void setOwner(PersonId owner) {
-        this.owner = owner;
-    }
-
-    public Notes getNotes() {
-        return notes;
-    }
-
-    public void setNotes(Notes notes) {
-        this.notes = notes;
-    }
-
-    public Furnishing getFurnishing() {
-        return furnishing;
-    }
-
-    public void setFurnishing(Furnishing furnishing) {
-        this.furnishing = furnishing;
     }
 }
